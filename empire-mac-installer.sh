@@ -11,7 +11,8 @@ brew install python
 pip install iptools
 pip install pydispatcher
 pip install pycrypto
-git+https://github.com/mtrmac/M2Crypto.git@swig-3.0.5-22.3#egg=M2Crypto
+pip install git+https://github.com/mtrmac/M2Crypto.git@swig-3.0.5-22.3#egg=M2Crypto
+#If theres errors with the above line manually clone https://github.com/mtrmac/M2Crypto.git and install
 #Update Python Env Var
 export PYTHONPATH="$PYTHONPATH:/usr/local/lib/python2.7/site-packages
 #Configure database

@@ -1,0 +1,25 @@
+'Written in VBA
+Sub Main()
+    Dim ConvertedChars As String
+    Dim CharsToConvert As String
+    
+    CharsToConvert = InputBox("Please enter the string you wish to convert, ya filthy animal.")
+    ConvertedChars = asciien(CharsToConvert)
+
+    'Strips off & at the end
+    ConvertedChars = Left(ConvertedChars, Len(ConvertedChars) - 1)
+    
+    'Returns converted string to user in copy/pasta format
+    InputBox "The resulting ASCII code is:", "Microsoft Word", ConvertedChars
+End Sub
+Public Function asciien(s As String) As String
+' Returns the string to its respective ascii numbers
+   Dim i As Integer
+
+   For i = 1 To Len(s)
+      asciien = asciien & " chr(" & CStr(Asc(Mid(s, i, 1))) & ") &"
+   Next i
+
+End Function
+
+
